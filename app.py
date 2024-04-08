@@ -50,7 +50,7 @@ def cosine_sim_mat(cv_matrix):
 # load data
 def read_data():
 
-    df = pd.read_csv("udemy_course_data.csv")
+    df = pd.read_csv("udemy_courses.csv")
 
     # convert price from Rupee to Dollar
     df["price"] = df["price"] * 0.0121

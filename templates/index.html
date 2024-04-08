@@ -37,16 +37,16 @@
             </div>
         </div>
     </nav>
-    <main role="main">
+    <main role="main" style="">
 
 
 
         <section class="jumbotron text-center">
-            <div class="container">
+            <div class="container" style="max-width: 1040px;margin-left:auto;margin-right:auto;">
                 <div class="form-floating my-4">
-                    <form class="row g-3" action="/" method="post">
-                        <div class="col-auto">
-                          <input name="course" type="text" class="form-control" id="course">
+                    <form class="row g-3 w-100" action="/" method="post">
+                        <div class="col-auto" style="width: 82%;">
+                          <input name="course" type="text" class="form-control" id="course" placeholder="Enter the name of the course">
                         </div>
                         <div class="col-auto">
                             <button type="submit" class="btn btn-primary">Recommend</button>
@@ -79,32 +79,18 @@
 
                 {%endif%}
 
-                <div class="row">
-
+                <div class="row" style="gap:12px;">
                     {%for course in coursemap%}
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-
-                            <div class="card-body bg-dark">
-                                <p class="card-text" style="color:white;">{{course}}</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="{{coursemap[course]}}" target="_blank" class="btn btn-outline-danger"
-                                            style="color: white;">View Course</a>
-                                    </div>
-                                </div>
+                    <div class="col" >
+                        <div class="card" style="width: 18rem; height: 100%">
+                            <div class="card-body">
+                              <h5 class="card-title">{{course}}</h5>
+                              <a href="{{coursemap[course]}}" class="btn btn-primary">Show course</a>
                             </div>
                         </div>
                     </div>
-
-                    {%endfor%}
-
-
-
-
+                        {%endfor%}
                 </div>
-
             </div>
         </div>
 
